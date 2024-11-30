@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentos Emocionales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(section).style.display = 'block';
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            showSection('welcome');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Cuentos Emocionales</div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('welcome')">Inicio</a></li>
+                    <li><a href="#" onclick="showSection('register')">Registrarse</a></li>
+                    <li><a href="#" onclick="showSection('login')">Iniciar Sesión</a></li>
+                    <li><a href="#" onclick="showSection('about')">Sobre Nosotros</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="welcome" class="welcome">
+                <h1>Bienvenidos a Cuentos Emocionales</h1>
+                <p>Descubre el poder de los libros y encuentra el perfecto para tu estado de ánimo.</p>
+                <p><strong>Cuento Emocional:</strong> Porque cada estado de ánimo merece su libro perfecto.</p>
+            </section>
+            <section id="register" class="register" style="display:none;">
+                <h1>Registrarse</h1>
+                <form class="container">
+                    <h1 class="login-title">login</h1>
+
+                    <section class="input-box">
+                        <input type="text" name="username" placeholder="username">
+                        <i class="bx bxs-user"></i>
+                    </section>
+                    <section class="input-box">
+                        <input type="password" name="password" placeholder="password">
+                        <i class=" bx bxs-lock-alt"></i>
+                    </section>
+
+                    <section class="remember-forgot-box">
+                        <div class="remember-me">
+                            <input type="checkbox" name="remember-me" id="remember-me">
+                            <label for="remember-me">
+                                <h5>remember me</h5>
+                            </label>
+                        </div>
+                        <a class="forgot-password" href="#">
+                            <h5>forgot password</h5>
+                        </a>
+                    </section>
+
+                    <button class="login-button" type="submit">
+                        login
+                    </button>
+
+                    <h5 class="dont-have-an-account">
+                        don't dont have an account
+                        <a href="#"><b>register</b></a>
+                    </h5>
+                </form>
+            </section>
+            <section id="login" class="login" style="display:none;">
+                <h1>Iniciar Sesión</h1>
+                <form>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <button type="submit">Ingresar</button>
+                </form>
+                <div class="dropdown" style="margin-top: 20px;">
+                    <label for="estado-animo">Selecciona tu estado de ánimo:</label>
+                    <select id="estado-animo">
+                        <option value="feliz">Feliz</option>
+                        <option value="triste">Triste</option>
+                        <option value="emocionado">Emocionado</option>
+                        <option value="tranquilo">Tranquilo</option>
+                    </select>
+                </div>
+            </section>
+            <section id="about" class="about" style="display:none;">
+                <h1>Sobre Nosotros</h1>
+                <p>Cuentos Emocionales es una plataforma dedicada a la recomendación de libros basados en el estado de ánimo del usuario. Nuestro objetivo es proporcionar una experiencia de lectura personalizada que ayude a conectar emocionalmente con cada historia.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Cuentos Emocionales. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
